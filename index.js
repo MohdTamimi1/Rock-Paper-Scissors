@@ -3,19 +3,21 @@ let computerEl = ["Rock", "Paper", "Scissors"];
 let playerEl = prompt("Enter Rock, Paper or Scissors to start the game");
 let playerSelection = playerPlay();
 let computerSelection = computerPlay();
+
 //function ComputerPlay - to show a random value to the computerEl
+
 function computerPlay() {
     computerEl = computerEl[Math.floor(Math.random() * computerEl.length)];
     return computerEl.toLowerCase();
 }
 
-//function playerPlay - change the value of playerEl ( fix to make the palyer input case-insensitive
+//function playerPlay - change the value of playerEl to fix to make the palyer input case-insensitive
 
 function playerPlay() {
     playerEl.value = playerEl.toLowerCase();
     return playerEl;
 }
-//function playRound - to compare the valye from playerEl and the value to the computerEl
+//function playRound - to compare the value from playerEl and the value to the computerEl
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
