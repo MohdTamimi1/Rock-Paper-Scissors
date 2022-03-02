@@ -8,7 +8,8 @@ function computerPlay() {
     return computerEl.toLowerCase();
 }
 
-//function playerPlay - to Ask a random value to the playerEl
+//function playerPlay - change the value of playerEl ( fix to make the palyer input case-insensitive
+
 function playerPlay() {
     playerEl = playerEl.toLowerCase();
     return playerEl;
