@@ -38,7 +38,7 @@ function playRound(playerSelection, computerSelection) {
 // game function is to play a 5 round game that keeps score and reports a winner or loser at the end
 
 function game() {
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 0; i < 5; i++) {
         console.log(playerPlay(), i);
         console.log(computerPlay(), i);
         console.log(playRound(playerSelection, computerSelection));
