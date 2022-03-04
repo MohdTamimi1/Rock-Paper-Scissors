@@ -19,3 +19,13 @@ function playerChoice() {
     let input = prompt("Please enter Rock, Paper, or Scissors to start the game")
     return input;
 }
+
+// function to compare the choices between player and computer
+
+function playRound() {
+    let playerSelection = playerChoice();
+    let computerSelection = computerChoice();
+    console.log(playerSelection, computerSelection);
+}
+
+console.log(playRound());
