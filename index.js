@@ -17,4 +17,5 @@ function computerChoice() {
 // function to ask the user for input
 function playerChoice() {
     let input = prompt("Please enter Rock, Paper, or Scissors to start the game")
+    return input;
 }
