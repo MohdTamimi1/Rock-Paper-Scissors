@@ -5,9 +5,10 @@ const choices = ["rock", "paper", "scissors"];
 
 // game function to start the game 
 function game() {
-
+    for (let i = 0; i < 5; i++) {
+        playRound();
+    }
 }
-
 
 // function to give the computer random choice each time we run the function
 function computerChoice() {
@@ -17,15 +18,27 @@ function computerChoice() {
 // function to ask the user for input
 function playerChoice() {
     let input = prompt("Please enter Rock, Paper, or Scissors to start the game")
-    return input;
+    return input.toLowerCase();
 }
 
 // function to compare the choices between player and computer
 
 function playRound() {
     let playerSelection = playerChoice();
+    console.log(playerSelection);
     let computerSelection = computerChoice();
-    console.log(playerSelection, computerSelection);
+    console.log(computerSelection);
+    if (playerSelection === computerSelection) {
+        console.log("It's a Tie");
+    } else if (
+        (playerSelection === "rock" && computerSelection === "paper") || 
+        (playerSelection === "scissors" && computerSelection === "rock") ||
+        (playerSelection === "paper" && computerSelection === "scissors")
+        ) {
+            console.log("Computer Won!!")
+    } else {
+        console.log("Player Won!!")
+    }
 }
 
-console.log(playRound());
+game();
