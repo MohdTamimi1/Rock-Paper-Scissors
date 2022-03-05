@@ -1,5 +1,7 @@
 // Global variables
 const choices = ["rock", "paper", "scissors"];
+let computerScore = 0;
+let playerScore = 0;
 
 // in the first stage before building an interface the game will run in the console
 
@@ -7,6 +9,21 @@ const choices = ["rock", "paper", "scissors"];
 function game() {
     for (let i = 0; i < 5; i++) {
         playRound();
+    }
+    
+    // score(playerScore, computerScore);
+    console.log(`-------------------------------
+    playerScore: ${playerScore} 
+    ComputerScore: ${computerScore} 
+    --------------------------------`);
+
+    // if statement to comopare the score and declares the winner
+    if (computerScore === playerScore) {
+        console.log("It's a Tie!!!")
+    } else if (computerScore < playerScore) {
+        console.log("Player Won The Game!!!")
+    } else {
+        console.log("Computer Won The Game!!!")
     }
 }
 
@@ -21,13 +38,15 @@ function playerChoice() {
     return input.toLowerCase();
 }
 
-// function to compare the choices between player and computer
+// function to compare the choices between player and count score for each player
 
 function playRound() {
     let playerSelection = playerChoice();
     console.log(playerSelection);
     let computerSelection = computerChoice();
     console.log(computerSelection);
+    
+    // compares between player choices and adds to the score each time the function is called
     if (playerSelection === computerSelection) {
         console.log("It's a Tie");
     } else if (
@@ -36,9 +55,12 @@ function playRound() {
         (playerSelection === "paper" && computerSelection === "scissors")
         ) {
             console.log("Computer Won!!")
+            return computerScore += 1;
     } else {
         console.log("Player Won!!")
+        return playerScore += 1;
     }
 }
 
+// call the main function that starts the game
 game();
