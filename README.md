@@ -1,2 +1,2 @@
 # Rock-Paper-Scissors
-Javascript practice project
+Javascript practice project still in the console
