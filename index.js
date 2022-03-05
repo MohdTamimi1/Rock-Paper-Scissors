@@ -12,9 +12,10 @@ function game() {
     }
     
     // score(playerScore, computerScore);
-    console.log(`-------------------------------
-    playerScore: ${playerScore} 
-    ComputerScore: ${computerScore} 
+    console.log(`
+    -------------------------------
+        playerScore: ${playerScore} 
+        ComputerScore: ${computerScore} 
     --------------------------------`);
 
     // if statement to comopare the score and declares the winner
@@ -42,22 +43,25 @@ function playerChoice() {
 
 function playRound() {
     let playerSelection = playerChoice();
-    console.log(playerSelection);
+    console.log(`Player Choice: ${playerSelection}`);
     let computerSelection = computerChoice();
-    console.log(computerSelection);
+    console.log(`Computer Choice: ${computerSelection}`);
     
     // compares between player choices and adds to the score each time the function is called
     if (playerSelection === computerSelection) {
         console.log("It's a Tie");
+        console.log("-------------------------------");
     } else if (
         (playerSelection === "rock" && computerSelection === "paper") || 
         (playerSelection === "scissors" && computerSelection === "rock") ||
         (playerSelection === "paper" && computerSelection === "scissors")
         ) {
             console.log("Computer Won!!")
+            console.log("-------------------------------")
             return computerScore += 1;
     } else {
         console.log("Player Won!!")
+        console.log("-------------------------------")
         return playerScore += 1;
     }
 }
