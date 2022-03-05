@@ -14,8 +14,11 @@ function game() {
     // score(playerScore, computerScore);
     console.log(`
     -------------------------------
+
             playerScore: ${playerScore} 
+
             ComputerScore: ${computerScore} 
+
     --------------------------------
     `);
 
