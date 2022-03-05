@@ -14,9 +14,10 @@ function game() {
     // score(playerScore, computerScore);
     console.log(`
     -------------------------------
-        playerScore: ${playerScore} 
-        ComputerScore: ${computerScore} 
-    --------------------------------`);
+            playerScore: ${playerScore} 
+            ComputerScore: ${computerScore} 
+    --------------------------------
+    `);
 
     // if statement to comopare the score and declares the winner
     if (computerScore === playerScore) {
