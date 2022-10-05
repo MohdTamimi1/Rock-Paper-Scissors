@@ -22,7 +22,7 @@ function game() {
     --------------------------------
     `);
 
-    // if statement to comopare the score and declares the winner
+    // if statement to compare the score and declares the winner
     if (computerScore === playerScore) {
         console.log("It's a Tie!!!")
     } else if (computerScore < playerScore) {
