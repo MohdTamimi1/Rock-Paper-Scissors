@@ -1,2 +1,2 @@
 # Rock-Paper-Scissors
-Javascript practice project (html/CSS)
+Javascript practice project (no html/CSS)
